@@ -6,13 +6,15 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "start": "npm run develop",
-    "build": "gatsby build",
+    "start": "gatsby develop --open --host 0.0.0.0",
+    "build": "gatsby build && rm ./public/*.map",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
+    "gh-pages": "^2.0.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1"
   },
