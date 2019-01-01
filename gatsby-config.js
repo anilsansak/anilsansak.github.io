@@ -1,3 +1,3 @@
-module.exports = {
-  pathPrefix: "/personal-website"
-};
+// module.exports = {
+//   pathPrefix: "/personal-website"
+// };
