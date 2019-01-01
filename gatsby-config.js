@@ -1,3 +1,3 @@
 module.exports = {
-  pathPrefix: "/anilsansak.github.io"
+  pathPrefix: "/personal-website"
 };
