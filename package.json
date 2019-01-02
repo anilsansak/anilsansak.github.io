@@ -17,7 +17,8 @@
     "gh-pages": "^2.0.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-jss": "^10.0.0-alpha.6"
   },
   "repository": {
     "type": "git",
