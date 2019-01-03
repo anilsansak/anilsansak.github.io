@@ -1,12 +1,19 @@
 import * as React from "react";
-// import injectSheet from "react-jss";
+import injectSheet from "react-jss";
 
-export default class Landing extends React.Component {
+const styles = theme => ({
+  DummyText: {
+    color: "red"
+  }
+});
+class Landing extends React.Component {
   render() {
+    const { classes } = this.props;
     return (
       <div>
-        <p>Home Landing</p>
+        <p className={classes.DummyText}>Home Landing</p>
       </div>
     );
   }
 }
+export default injectSheet(styles)(Landing);
