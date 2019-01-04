@@ -30,34 +30,32 @@ class Header extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
-        <div className={classes.Header}>
-          <div className={classes.HeaderCarrier}>
-            <div className={classes.HeaderHome}>
-              <Link to="/">
-                <p>Home</p>
-              </Link>
-            </div>
-            <div className={classes.HeaderItem}>
-              <Link to="/">
-                <p>My Story</p>
-              </Link>
-            </div>
-            <div className={classes.HeaderItem}>
-              <Link to="/">
-                <p>Projects</p>
-              </Link>
-            </div>
-            <div className={classes.HeaderItem}>
-              <Link to="/">
-                <p>Blog</p>
-              </Link>
-            </div>
-            <div className={classes.HeaderItem}>
-              <Link to="/">
-                <p>Resume</p>
-              </Link>
-            </div>
+      <div className={classes.Header}>
+        <div className={classes.HeaderCarrier}>
+          <div className={classes.HeaderHome}>
+            <Link to="/">
+              <p>Home</p>
+            </Link>
+          </div>
+          <div className={classes.HeaderItem}>
+            <Link to="/">
+              <p>My Story</p>
+            </Link>
+          </div>
+          <div className={classes.HeaderItem}>
+            <Link to="/">
+              <p>Projects</p>
+            </Link>
+          </div>
+          <div className={classes.HeaderItem}>
+            <Link to="/">
+              <p>Blog</p>
+            </Link>
+          </div>
+          <div className={classes.HeaderItem}>
+            <Link to="/">
+              <p>Resume</p>
+            </Link>
           </div>
         </div>
       </div>
