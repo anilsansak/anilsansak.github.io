@@ -67,6 +67,44 @@ const styles = theme => ({
       height: 400
     },
     height: 400
+  },
+  "@media (max-width:500px)": {
+    LandingCarrier: {
+      flexDirection: "column",
+      height: "100%"
+    },
+    LandingText: {
+      margin: "auto",
+      height: "100%",
+      width: "100%",
+      marginBottom: 50
+    },
+    LandingTextTitle: {
+      marginBottom: 12
+    },
+    LandingTextDesc: {
+      marginBottom: 50
+    },
+    LandingTextButtons: {
+      flexDirection: "column",
+      alignItems: "center",
+      "& div": {
+        marginRight: 0,
+        marginBottom: 10
+      }
+    },
+    LandingVisual: {
+      width: "100%",
+      height: "100%"
+    },
+    LandingVisualImage: {
+      height: "100%",
+      width: "100%",
+      "& img": {
+        width: "100%",
+        height: "auto"
+      }
+    }
   }
 });
 class Landing extends React.Component {
@@ -95,7 +133,7 @@ class Landing extends React.Component {
           <div className={classes.LandingVisual}>
             <div className={classes.LandingVisualImage}>
               <img
-                alt="developer image"
+                alt="developer vector"
                 src={require("../../../img/developer.svg")}
               />
             </div>
