@@ -24,6 +24,12 @@ const styles = theme => ({
   HeaderItem: {
     flex: 1,
     textAlign: "center"
+  },
+  "@media (max-width:500px)": {
+    HeaderHome: {
+      flex: 1,
+      textAlign: "center"
+    }
   }
 });
 class Header extends React.Component {
