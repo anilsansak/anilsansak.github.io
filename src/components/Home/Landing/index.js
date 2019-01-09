@@ -1,7 +1,5 @@
 import * as React from "react";
 import injectSheet from "react-jss";
-// import { StaticQuery, graphql } from "gatsby";
-// import Img from "gatsby-image";
 
 const styles = theme => ({
   Landing: {
@@ -52,7 +50,8 @@ const styles = theme => ({
       borderRadius: 30,
       textAlign: "center",
       color: "#FFF",
-      marginRight: 50
+      marginRight: 50,
+      cursor: "pointer"
     },
     "& p": {
       fontWeight: 800,
@@ -108,6 +107,12 @@ const styles = theme => ({
   }
 });
 class Landing extends React.Component {
+  handleAbout = () => {
+    let element = document.getElementById("story");
+    if (element) {
+      element.scrollIntoView(true);
+    }
+  };
   render() {
     const { classes } = this.props;
     return (
@@ -122,7 +127,10 @@ class Landing extends React.Component {
               <p>a software developer.</p>
             </div>
             <div className={classes.LandingTextButtons}>
-              <div className={classes.LandingTextButtonAbout}>
+              <div
+                className={classes.LandingTextButtonAbout}
+                onClick={this.handleAbout}
+              >
                 <p>More About Me</p>
               </div>
               <div className={classes.LandingTextButtonContact}>
@@ -144,32 +152,3 @@ class Landing extends React.Component {
   }
 }
 export default injectSheet(styles)(Landing);
-
-// export function ImageRender(props) {
-//   const { classes } = props;
-
-//   return (
-//     <StaticQuery
-//       query={graphql`
-//         {
-//           developerImage: imageSharp(
-//             sizes: { originalName: { eq: "c-something.png" } }
-//           ) {
-//             fluid(maxWidth: 480, quality: 100) {
-//               ...GatsbyImageSharpFluid_withWebp
-//             }
-//           }
-//         }
-//       `}
-//       render={data => (
-//         <div className={classes.Image}>
-//           <Img
-//             alt="developer image"
-//             className={classes.ImageOuterWrapper}
-//             {...data.developerImage}
-//           />
-//         </div>
-//       )}
-//     />
-//   );
-// }

@@ -2,6 +2,7 @@ import * as React from "react";
 // import injectSheet from "react-jss";
 import Landing from "./Landing";
 import Header from "../Header";
+import Story from "../Story";
 
 export default class Home extends React.Component {
   render() {
@@ -9,6 +10,7 @@ export default class Home extends React.Component {
       <div>
         <Header />
         <Landing />
+        <Story />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import * as React from "react";
 import injectSheet from "react-jss";
 import { Link } from "gatsby";
+import { getLocalLanguage } from "../../utilities/index";
 const styles = theme => ({
   Header: {
     width: "100%",
@@ -44,7 +45,7 @@ class Header extends React.Component {
             </Link>
           </div>
           <div className={classes.HeaderItem}>
-            <Link to="/">
+            <Link to={"/" + getLocalLanguage() + "/#story"}>
               <p>My Story</p>
             </Link>
           </div>

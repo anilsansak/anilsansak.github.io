@@ -31,6 +31,13 @@ export function getLang() {
 let _localLanguage = null;
 
 export function getLocalLanguage() {
+  let path = window.location.pathname;
+  if (path === "/tr/") {
+    return "tr";
+  } else if (path === "/en/") {
+    return "en";
+  }
+
   return _localLanguage;
 }
 
