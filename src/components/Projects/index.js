@@ -51,6 +51,19 @@ const styles = theme => ({
       width: 32,
       height: 32
     }
+  },
+  "@media (max-width:500px)": {
+    Project: {
+      flexDirection: "column",
+      marginTop: 24
+    },
+    Title: {
+      alignItems: "center",
+      marginRight: 0
+    },
+    Text: {
+      marginLeft: 0
+    }
   }
 });
 class Projects extends React.Component {
