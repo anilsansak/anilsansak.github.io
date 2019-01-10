@@ -3,6 +3,7 @@ import * as React from "react";
 import Landing from "./Landing";
 import Header from "../Header";
 import Story from "../Story";
+import Projects from "../Projects";
 
 export default class Home extends React.Component {
   render() {
@@ -11,6 +12,7 @@ export default class Home extends React.Component {
         <Header />
         <Landing />
         <Story />
+        <Projects />
       </div>
     );
   }

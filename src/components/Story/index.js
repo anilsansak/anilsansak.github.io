@@ -10,7 +10,7 @@ const styles = theme => ({
     maxWidth: 1000,
     display: "flex",
     flexDirection: "column",
-    margin: "auto"
+    margin: "48px auto"
   },
   StoryTitle: {
     display: "flex",

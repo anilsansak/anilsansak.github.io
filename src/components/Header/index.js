@@ -50,13 +50,13 @@ class Header extends React.Component {
             </Link>
           </div>
           <div className={classes.HeaderItem}>
-            <Link to="/">
+            <Link to={"/" + getLocalLanguage() + "/#projects"}>
               <p>Projects</p>
             </Link>
           </div>
           <div className={classes.HeaderItem}>
             <Link to="/">
-              <p>Blog</p>
+              <p>Contact Me</p>
             </Link>
           </div>
           <div className={classes.HeaderItem}>
