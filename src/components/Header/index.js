@@ -19,17 +19,17 @@ const styles = theme => ({
       textDecoration: "none"
     }
   },
-  HeaderHome: {
-    flex: 4
+
+  EmtpyBlock: {
+    flex: 3
   },
   HeaderItem: {
     flex: 1,
     textAlign: "center"
   },
   "@media (max-width:500px)": {
-    HeaderHome: {
-      flex: 1,
-      textAlign: "center"
+    EmtpyBlock: {
+      display: "none"
     }
   }
 });
@@ -39,11 +39,13 @@ class Header extends React.Component {
     return (
       <div className={classes.Header}>
         <div className={classes.HeaderCarrier}>
-          <div className={classes.HeaderHome}>
+          <div className={classes.HeaderItem}>
             <Link to="/">
               <p>Home</p>
             </Link>
           </div>
+          <div className={classes.EmtpyBlock} />
+
           <div className={classes.HeaderItem}>
             <Link to={"/" + getLocalLanguage() + "/#story"}>
               <p>My Story</p>
