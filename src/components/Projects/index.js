@@ -10,7 +10,8 @@ const styles = theme => ({
     width: "100%",
     height: "100%",
     maxWidth: 1000,
-    margin: "48px auto"
+    margin: "48px auto",
+    marginBottom: 0
   },
   ProjectsTitle: {
     display: "flex",
