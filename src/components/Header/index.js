@@ -56,11 +56,6 @@ class Header extends React.Component {
           </div>
           <div className={classes.HeaderItem}>
             <Link to="/">
-              <p>Contact Me</p>
-            </Link>
-          </div>
-          <div className={classes.HeaderItem}>
-            <Link to="/">
               <p>Resume</p>
             </Link>
           </div>

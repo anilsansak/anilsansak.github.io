@@ -26,12 +26,18 @@ const styles = theme => ({
       margin: 0,
       fontSize: "5em"
     },
-    marginBottom: 25
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start"
   },
   LandingTextDesc: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: 100,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "flex-start",
     "& p": {
       margin: 0,
       fontSize: "2em"
@@ -43,6 +49,8 @@ const styles = theme => ({
   LandingTextButtons: {
     display: "flex",
     flexDirection: "row",
+    flex: 1,
+    alignItems: "center",
     "& div": {
       width: 200,
       height: 60,
@@ -78,12 +86,7 @@ const styles = theme => ({
       width: "100%",
       marginBottom: 50
     },
-    LandingTextTitle: {
-      marginBottom: 12
-    },
-    LandingTextDesc: {
-      marginBottom: 50
-    },
+
     LandingTextButtons: {
       flexDirection: "column",
       alignItems: "center",

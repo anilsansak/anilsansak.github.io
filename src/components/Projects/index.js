@@ -178,7 +178,7 @@ class Projects extends React.Component {
                     <li>Javascript</li>
                     <li>CSS</li>
                     <li>HTML</li>
-                    <li>Gİthub Pages</li>
+                    <li>Github Pages</li>
                   </ul>
                 </div>
                 <div className={classes.Links}>
