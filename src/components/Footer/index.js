@@ -4,7 +4,9 @@ import injectSheet from "react-jss";
 const styles = theme => ({
   Footer: {
     width: "100%",
-    height: "100%"
+    height: "100%",
+    borderTop: "5px solid #000",
+    marginTop: 24
   },
   FooterCarrier: {
     height: "100%",
