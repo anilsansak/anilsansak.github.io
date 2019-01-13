@@ -28,8 +28,9 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    borderBottom: "1px dashed #454545",
-    marginTop: 48
+    marginTop: 48,
+    backgroundColor: "#dcdee2",
+    borderRadius: 32
   },
   Title: {
     display: "flex",
