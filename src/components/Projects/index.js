@@ -28,7 +28,7 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 48,
+    marginBottom: 48,
     backgroundColor: "#dcdee2",
     borderRadius: 32
   },
