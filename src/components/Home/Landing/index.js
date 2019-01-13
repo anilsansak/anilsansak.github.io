@@ -78,15 +78,21 @@ const styles = theme => ({
   "@media (max-width:500px)": {
     LandingCarrier: {
       flexDirection: "column",
-      height: "100%"
+      height: "100%",
+      width: "calc(100% - 50px)"
     },
     LandingText: {
-      margin: "auto",
+      margin: "50px auto",
       height: "100%",
-      width: "100%",
-      marginBottom: 50
+      width: "100%"
     },
-
+    LandingTextTitle: {
+      fontSize: "0.7em"
+    },
+    LandingTextDesc: {
+      marginBottom: 36,
+      fontSize: "0.7em"
+    },
     LandingTextButtons: {
       flexDirection: "column",
       alignItems: "center",
