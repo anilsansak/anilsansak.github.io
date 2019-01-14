@@ -45,75 +45,77 @@ const styles = theme => ({
 
 class Projects extends React.Component {
   state = {
-    focused: ""
+    focused: "none"
   };
   renderBudgetpack = () => {
-    if (this.state.isFocused) {
+    if (this.state.focused === "budgetpack") {
       return (
         <div>
-          <p>not focused</p>
+          <p>is focused</p>
         </div>
       );
     } else {
       return (
         <div>
-          <p>is focused</p>
+          <p>not focused</p>
         </div>
       );
     }
   };
   renderMevzubahis = () => {
-    if (this.state.isFocused) {
+    if (this.state.focused === "mevzubahis") {
       return (
         <div>
-          <p>not focused</p>
+          <p>is focused</p>
         </div>
       );
     } else {
       return (
         <div>
-          <p>is focused</p>
+          <p>not focused</p>
         </div>
       );
     }
   };
   renderBouncingBallzz = () => {
-    if (this.state.isFocused) {
+    if (this.state.focused === "bouncingballzz") {
       return (
         <div>
-          <p>not focused</p>
+          <p>is focused</p>
         </div>
       );
     } else {
       return (
         <div>
-          <p>is focused</p>
+          <p>not focused</p>
         </div>
       );
     }
   };
   renderPersonalWebsite = () => {
-    if (this.state.isFocused) {
-      return (
-        <div>
-          <p>not focused</p>
-        </div>
-      );
-    } else {
+    if (this.state.focused === "personalwebsite") {
       return (
         <div>
           <p>is focused</p>
         </div>
       );
+    } else {
+      return (
+        <div>
+          <p>not focused</p>
+        </div>
+      );
     }
   };
 
-  handleClick = e => {
-    console.log("dsafsa", e.target.id);
+  handleMouseOver = e => {
     if (e.target.id) {
-      this.setState({ isFocused: false });
-    } else {
-      this.setState({ isFocused: true });
+      this.setState({ focused: e.target.id });
+    }
+  };
+  handleMouseOut = () => {
+    if (this.state.focused !== "none") {
+      this.setState({ focused: "none" });
     }
   };
 
@@ -130,14 +132,16 @@ class Projects extends React.Component {
               <div
                 id="budgetpack"
                 className={classes.Project}
-                onClick={e => this.handleClick(e)}
+                onMouseOver={this.handleMouseOver}
+                onMouseOut={this.handleMouseOut}
               >
                 {this.renderBudgetpack()}
               </div>
               <div
                 id="mevzubahis"
                 className={classes.Project}
-                onClick={this.handleClick}
+                onMouseOver={this.handleMouseOver}
+                onMouseOut={this.handleMouseOut}
               >
                 {this.renderMevzubahis()}
               </div>
@@ -146,14 +150,16 @@ class Projects extends React.Component {
               <div
                 id="bouncingballzz"
                 className={classes.Project}
-                onClick={this.handleClick}
+                onMouseOver={this.handleMouseOver}
+                onMouseOut={this.handleMouseOut}
               >
                 {this.renderBouncingBallzz()}
               </div>
               <div
                 id="personalwebsite"
                 className={classes.Project}
-                onClick={this.handleClick}
+                onMouseOver={this.handleMouseOver}
+                onMouseOut={this.handleMouseOut}
               >
                 {this.renderPersonalWebsite()}
               </div>
