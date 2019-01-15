@@ -71,7 +71,15 @@ const styles = theme => ({
     margin: "0px 12px"
   },
 
-  "@media (max-width:500px)": {}
+  "@media (max-width:500px)": {
+    Section: {
+      flexDirection: "column"
+    },
+    Project: {
+      width: "100%",
+      margin: "24px 0px"
+    }
+  }
 });
 
 class Projects extends React.Component {

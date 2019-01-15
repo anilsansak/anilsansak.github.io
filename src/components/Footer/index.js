@@ -60,6 +60,14 @@ class Footer extends React.Component {
                 <img alt="gitlab logo" src={require("../../img/gitlab.png")} />
               </a>
             </div>
+            <div className={classes.Logo}>
+              <a href="https://www.linkedin.com/in/yasar-anil-sansak/">
+                <img
+                  alt="linkedin logo"
+                  src={require("../../img/linkedin-logo.svg")}
+                />
+              </a>
+            </div>
           </div>
           <div className={classes.FooterText}>
             <p>2019</p>
