@@ -32,13 +32,44 @@ const styles = theme => ({
     width: "50%",
     height: 300,
     margin: 24,
-    backgroundColor: "#000",
-    color: "#fff"
+    border: "1px solid black"
   },
+  ProjectContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
+    pointerEvents: "none"
+  },
+
   Title: {},
-  Text: {},
-  Desc: {},
-  Stack: {},
+  Stack: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    width: "100%"
+  },
+  SingleStack: {
+    "& img": {
+      width: 32,
+      height: 32
+    },
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  Desc: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    margin: "0px 12px"
+  },
 
   "@media (max-width:500px)": {}
 });
@@ -47,62 +78,140 @@ class Projects extends React.Component {
   state = {
     focused: "none"
   };
-  renderBudgetpack = () => {
+  renderBudgetpack = classes => {
     if (this.state.focused === "budgetpack") {
       return (
-        <div>
-          <p>is focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Desc}>
+            <p>
+              Budgetpack is an app that created for people who are on budget and
+              want to travel the world and do as much as they can.
+            </p>
+          </div>
+          <div className={classes.Stack}>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/android-logo.svg")} />
+              <p>Android</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="java" src={require("../../img/java.svg")} />
+              <p>Java</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/firebase.svg")} />
+              <p>Firebase</p>
+            </div>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <p>not focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Title}>
+            <p>Budgetpack</p>
+          </div>
         </div>
       );
     }
   };
-  renderMevzubahis = () => {
+  renderMevzubahis = classes => {
     if (this.state.focused === "mevzubahis") {
       return (
-        <div>
-          <p>is focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Desc}>
+            <p>
+              Senior Year Project. An Android app that lets users challenge
+              their friends in both sportive and social subjects.
+            </p>
+          </div>
+          <div className={classes.Stack}>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/android-logo.svg")} />
+              <p>Android</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="java" src={require("../../img/java.svg")} />
+              <p>Java</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/firebase.svg")} />
+              <p>Firebase</p>
+            </div>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <p>not focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Title}>
+            <p>Mevzubahis</p>
+          </div>
         </div>
       );
     }
   };
-  renderBouncingBallzz = () => {
+  renderBouncingBallzz = classes => {
     if (this.state.focused === "bouncingballzz") {
       return (
-        <div>
-          <p>is focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Desc}>
+            <p>A 2D Android game made with Unity.</p>
+          </div>
+          <div className={classes.Stack}>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/unity.svg")} />
+              <p>Unity</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="java" src={require("../../img/c-sharp-logo.svg")} />
+              <p>C#</p>
+            </div>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <p>not focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Title}>
+            <p>BouncingBallzz</p>
+          </div>
         </div>
       );
     }
   };
-  renderPersonalWebsite = () => {
+  renderPersonalWebsite = classes => {
     if (this.state.focused === "personalwebsite") {
       return (
-        <div>
-          <p>is focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Desc}>
+            <p>Personal website built with Gatsby.</p>
+          </div>
+          <div className={classes.Stack}>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/gatsby.svg")} />
+              <p>GatsbyJS</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="java" src={require("../../img/react.svg")} />
+              <p>React</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/js.svg")} />
+              <p>Javascript</p>
+            </div>
+            <div className={classes.SingleStack}>
+              <img alt="android" src={require("../../img/css-3.svg")} />
+              <p>CSS</p>
+            </div>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <p>not focused</p>
+        <div className={classes.ProjectContainer}>
+          <div className={classes.Title}>
+            <p>anilsansak.github.io</p>
+          </div>
         </div>
       );
     }
@@ -135,7 +244,7 @@ class Projects extends React.Component {
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
               >
-                {this.renderBudgetpack()}
+                {this.renderBudgetpack(classes)}
               </div>
               <div
                 id="mevzubahis"
@@ -143,7 +252,7 @@ class Projects extends React.Component {
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
               >
-                {this.renderMevzubahis()}
+                {this.renderMevzubahis(classes)}
               </div>
             </div>
             <div className={classes.Section}>
@@ -153,7 +262,7 @@ class Projects extends React.Component {
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
               >
-                {this.renderBouncingBallzz()}
+                {this.renderBouncingBallzz(classes)}
               </div>
               <div
                 id="personalwebsite"
@@ -161,7 +270,7 @@ class Projects extends React.Component {
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
               >
-                {this.renderPersonalWebsite()}
+                {this.renderPersonalWebsite(classes)}
               </div>
             </div>
           </div>
