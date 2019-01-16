@@ -32,7 +32,8 @@ const styles = theme => ({
     width: "50%",
     height: 300,
     margin: 24,
-    border: "1px solid black"
+    border: "1px solid black",
+    borderRadius: 10
   },
   ProjectContainer: {
     display: "flex",
