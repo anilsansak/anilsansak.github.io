@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{180:function(n,e,t){"use strict";t.r(e),t.d(e,"default",function(){return i});var r=t(0),a=t.n(r),c=t(191),u=t(182);function i(){return Object(u.c)("tr"),a.a.createElement("div",{lang:"tr"},a.a.createElement(c.a,null))}}}]);
+//# sourceMappingURL=component---src-pages-tr-index-js-7346f83701253c569fc8.js.map
