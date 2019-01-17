@@ -40,15 +40,20 @@ class Header extends React.Component {
       <div className={classes.Header}>
         <div className={classes.HeaderCarrier}>
           <div className={classes.HeaderItem}>
-            <Link to="/">
+            <Link to={"/" + getLocalLanguage()}>
               <p>Home</p>
             </Link>
           </div>
           <div className={classes.EmtpyBlock} />
 
           <div className={classes.HeaderItem}>
-            <Link to={"/" + getLocalLanguage() + "/#story"}>
+            <Link to={"/" + getLocalLanguage() + "/story"}>
               <p>My Story</p>
+            </Link>
+          </div>
+          <div className={classes.HeaderItem}>
+            <Link to={"/" + getLocalLanguage() + "/#skills"}>
+              <p>Skills</p>
             </Link>
           </div>
           <div className={classes.HeaderItem}>

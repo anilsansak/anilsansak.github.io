@@ -2,7 +2,7 @@ import * as React from "react";
 // import injectSheet from "react-jss";
 import Landing from "./Landing";
 import Header from "../Header";
-import Story from "../Story";
+import Skills from "../Skills";
 import Projects from "../Projects";
 import Footer from "../Footer";
 export default class Home extends React.Component {
@@ -11,7 +11,7 @@ export default class Home extends React.Component {
       <div>
         <Header />
         <Landing />
-        <Story />
+        <Skills />
         <Projects />
         <Footer />
       </div>

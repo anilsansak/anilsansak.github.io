@@ -77,8 +77,8 @@ const styles = theme => ({
       flexDirection: "column"
     },
     Project: {
-      width: "100%",
-      margin: "24px 0px"
+      width: "90%",
+      margin: "24px auto"
     }
   }
 });
